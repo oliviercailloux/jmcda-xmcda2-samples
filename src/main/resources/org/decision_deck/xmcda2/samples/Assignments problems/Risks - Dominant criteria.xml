@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.1.0">
+	<projectReference>
+		<title>Risks - Dominant criteria</title>
+		<comment>A simple set of assignments where the
+			decision maker "Risk-averse" wants a risk below one for an
+			alternative to be good and the decision-maker "Greedy" requires a
+			benefit over 10. Only one ELECTRE-Tri profile satisfy these examples
+			(when not using vetoes).</comment>
+	</projectReference>
+	<alternatives mcdaConcept="Real">
+		<alternative id="Risky" name="Risky" />
+		<alternative id="Useful" name="Useful" />
+		<alternative id="Unuseful" name="Unuseful" />
+		<alternative id="Sure" name="Sure" />
+	</alternatives>
+	<alternatives mcdaConcept="Fictive">
+		<alternative id="middle_profile" name="middle_profile">
+			<type>fictive</type>
+		</alternative>
+	</alternatives>
+	<categories>
+		<category id="good">
+			<rank>
+				<integer>1</integer>
+			</rank>
+		</category>
+		<category id="bad">
+			<rank>
+				<integer>2</integer>
+			</rank>
+		</category>
+	</categories>
+	<categoriesProfiles>
+		<categoryProfile>
+			<alternativeID>middle_profile</alternativeID>
+			<limits>
+				<lowerCategory>
+					<categoryID>bad</categoryID>
+				</lowerCategory>
+				<upperCategory>
+					<categoryID>good</categoryID>
+				</upperCategory>
+			</limits>
+		</categoryProfile>
+	</categoriesProfiles>
+	<criteria>
+		<criterion id="rsk" name="risk">
+			<scale>
+				<quantitative>
+					<preferenceDirection>min</preferenceDirection>
+				</quantitative>
+			</scale>
+		</criterion>
+		<criterion id="ben" name="benefit">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+		</criterion>
+	</criteria>
+	<performanceTable>
+		<alternativePerformances>
+			<alternativeID>Unuseful</alternativeID>
+			<performance>
+				<criterionID>rsk</criterionID>
+				<value>
+					<real>0.0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>ben</criterionID>
+				<value>
+					<real>9.9</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+		<alternativePerformances>
+			<alternativeID>Sure</alternativeID>
+			<performance>
+				<criterionID>rsk</criterionID>
+				<value>
+					<real>0.9</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>ben</criterionID>
+				<value>
+					<real>0.0</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+		<alternativePerformances>
+			<alternativeID>Useful</alternativeID>
+			<performance>
+				<criterionID>rsk</criterionID>
+				<value>
+					<real>1.0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>ben</criterionID>
+				<value>
+					<real>10.0</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+		<alternativePerformances>
+			<alternativeID>Risky</alternativeID>
+			<performance>
+				<criterionID>rsk</criterionID>
+				<value>
+					<real>1.0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>ben</criterionID>
+				<value>
+					<real>10.0</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+	</performanceTable>
+	<methodParameters>
+		<parameter>
+			<value>
+				<label>Greedy</label>
+			</value>
+		</parameter>
+		<parameter>
+			<value>
+				<label>Risk-averse</label>
+			</value>
+		</parameter>
+	</methodParameters>
+	<alternativesAffectations name="Risk-averse">
+		<alternativeAffectation>
+			<alternativeID>Risky</alternativeID>
+			<categoryID>bad</categoryID>
+		</alternativeAffectation>
+		<alternativeAffectation>
+			<alternativeID>Sure</alternativeID>
+			<categoryID>good</categoryID>
+		</alternativeAffectation>
+	</alternativesAffectations>
+	<alternativesAffectations name="Greedy">
+		<alternativeAffectation>
+			<alternativeID>Unuseful</alternativeID>
+			<categoryID>bad</categoryID>
+		</alternativeAffectation>
+		<alternativeAffectation>
+			<alternativeID>Useful</alternativeID>
+			<categoryID>good</categoryID>
+		</alternativeAffectation>
+	</alternativesAffectations>
+</xmcda:XMCDA>

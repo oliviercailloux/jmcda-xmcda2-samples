@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.1.0">
+	<projectReference>
+		<title>One alternative</title>
+	</projectReference>
+	<alternatives mcdaConcept="REAL">
+		<alternative id="a1" />
+	</alternatives>
+	<criteria>
+		<criterion id="g1"/>
+	</criteria>
+	<performanceTable mcdaConcept="FICTIVE">
+		<alternativePerformances>
+			<alternativeID>a1</alternativeID>
+			<performance>
+				<criterionID>g1</criterionID>
+				<value>
+					<real>1</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+	</performanceTable>
+</xmcda:XMCDA>

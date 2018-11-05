@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.1.0">
+	<projectReference>
+		<title>Impossible - Two criteria</title>
+		<comment>A set of assignments which does not respect dominance.
+			An alternative which dominates an other one is assigned in a worst class.
+		</comment>
+	</projectReference>
+	<alternatives mcdaConcept="Real">
+		<alternative id="Good" name="Good" />
+		<alternative id="Better" name="Better_but_bad" />
+	</alternatives>
+	<alternatives mcdaConcept="Fictive">
+		<alternative id="profile" name="profile">
+			<type>fictive</type>
+		</alternative>
+	</alternatives>
+	<categories>
+		<category id="good">
+			<rank>
+				<integer>1</integer>
+			</rank>
+		</category>
+		<category id="bad">
+			<rank>
+				<integer>2</integer>
+			</rank>
+		</category>
+	</categories>
+	<categoriesProfiles>
+		<categoryProfile>
+			<alternativeID>profile</alternativeID>
+			<limits>
+				<lowerCategory>
+					<categoryID>bad</categoryID>
+				</lowerCategory>
+				<upperCategory>
+					<categoryID>good</categoryID>
+				</upperCategory>
+			</limits>
+		</categoryProfile>
+	</categoriesProfiles>
+	<criteria>
+		<criterion id="favorable" name="unique">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+		</criterion>
+		<criterion id="demanding" name="unique">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+		</criterion>
+	</criteria>
+	<performanceTable>
+		<alternativePerformances>
+			<alternativeID>Good</alternativeID>
+			<performance>
+				<criterionID>favorable</criterionID>
+				<value>
+					<real>2</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>demanding</criterionID>
+				<value>
+					<real>0</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+		<alternativePerformances>
+			<alternativeID>Better</alternativeID>
+			<performance>
+				<criterionID>favorable</criterionID>
+				<value>
+					<real>3</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>demanding</criterionID>
+				<value>
+					<real>0</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+	</performanceTable>
+	<methodParameters>
+		<parameter>
+			<value>
+				<label>DM</label>
+			</value>
+		</parameter>
+	</methodParameters>
+	<alternativesAffectations name="DM">
+		<alternativeAffectation>
+			<alternativeID>Good</alternativeID>
+			<categoryID>good</categoryID>
+		</alternativeAffectation>
+		<alternativeAffectation>
+			<alternativeID>Better</alternativeID>
+			<categoryID>bad</categoryID>
+		</alternativeAffectation>
+	</alternativesAffectations>
+</xmcda:XMCDA>

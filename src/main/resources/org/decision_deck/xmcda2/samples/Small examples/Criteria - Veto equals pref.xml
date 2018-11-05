@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.1.0">
+	<criteria>
+		<criterion id="g1">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+		</criterion>
+		<criterion id="g2">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+		</criterion>
+		<criterion id="g3">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<real>3.0</real>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="veto">
+					<constant>
+						<real>3.0</real>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+	</criteria>
+</xmcda:XMCDA>

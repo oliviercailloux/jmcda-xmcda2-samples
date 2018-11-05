@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.1.0">
+	<projectReference>
+		<title>Three decision makers</title>
+	</projectReference>
+	<methodParameters>
+		<parameter>
+			<value>
+				<label>dm1</label>
+			</value>
+		</parameter>
+		<parameter>
+			<value>
+				<label>dm2</label>
+			</value>
+		</parameter>
+		<parameter>
+			<value>
+				<label>dm3</label>
+			</value>
+		</parameter>
+	</methodParameters>
+</xmcda:XMCDA>

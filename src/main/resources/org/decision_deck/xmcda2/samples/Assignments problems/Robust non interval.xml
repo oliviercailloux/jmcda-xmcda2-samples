@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.1.0">
+	<projectReference>
+		<title>Robust non interval</title>
+		<comment>A problem where one assignment example and one alternative to be classified is provided. Robust assignment of the alternative when satisfying the assignment example and using the given profiles evaluations lead to a non interval assignment.</comment>
+	</projectReference>
+	<alternatives mcdaConcept="REAL">
+		<alternative id="a" />
+	</alternatives>
+	<alternatives mcdaConcept="FICTIVE">
+		<alternative id="p1" />
+		<alternative id="p2" />
+	</alternatives>
+	<categories>
+		<category id="C1">
+			<rank>
+				<integer>3</integer>
+			</rank>
+		</category>
+		<category id="C2">
+			<rank>
+				<integer>2</integer>
+			</rank>
+		</category>
+		<category id="C3">
+			<rank>
+				<integer>1</integer>
+			</rank>
+		</category>
+	</categories>
+	<categoriesProfiles>
+		<categoryProfile>
+			<alternativeID>p1</alternativeID>
+			<limits>
+				<lowerCategory>
+					<categoryID>C1</categoryID>
+				</lowerCategory>
+				<upperCategory>
+					<categoryID>C2</categoryID>
+				</upperCategory>
+			</limits>
+		</categoryProfile>
+		<categoryProfile>
+			<alternativeID>p2</alternativeID>
+			<limits>
+				<lowerCategory>
+					<categoryID>C2</categoryID>
+				</lowerCategory>
+				<upperCategory>
+					<categoryID>C3</categoryID>
+				</upperCategory>
+			</limits>
+		</categoryProfile>
+	</categoriesProfiles>
+	<criteria>
+		<criterion id="g1">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+		</criterion>
+		<criterion id="g2">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+		</criterion>
+		<criterion id="g3">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+		</criterion>
+	</criteria>
+	<performanceTable mcdaConcept="REAL">
+		<alternativePerformances>
+			<alternativeID>a</alternativeID>
+			<performance>
+				<criterionID>g1</criterionID>
+				<value>
+					<real>0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g2</criterionID>
+				<value>
+					<real>2</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g3</criterionID>
+				<value>
+					<real>1</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+		<alternativePerformances>
+			<alternativeID>x</alternativeID>
+			<performance>
+				<criterionID>g1</criterionID>
+				<value>
+					<real>0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g2</criterionID>
+				<value>
+					<real>0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g3</criterionID>
+				<value>
+					<real>1</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+	</performanceTable>
+	<performanceTable mcdaConcept="FICTIVE">
+		<alternativePerformances>
+			<alternativeID>p1</alternativeID>
+			<performance>
+				<criterionID>g1</criterionID>
+				<value>
+					<real>1</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g2</criterionID>
+				<value>
+					<real>1</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g3</criterionID>
+				<value>
+					<real>1</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+		<alternativePerformances>
+			<alternativeID>p2</alternativeID>
+			<performance>
+				<criterionID>g1</criterionID>
+				<value>
+					<real>2</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g2</criterionID>
+				<value>
+					<real>2</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g3</criterionID>
+				<value>
+					<real>2</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+	</performanceTable>
+	<alternativesAffectations>
+		<alternativeAffectation>
+			<alternativeID>x</alternativeID>
+			<categoryID>C1</categoryID>
+		</alternativeAffectation>
+	</alternativesAffectations>
+</xmcda:XMCDA>
