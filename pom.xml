@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>jmcda</artifactId>
+		<artifactId>jmcda-pom</artifactId>
 		<groupId>org.decision_deck.jmcda</groupId>
 		<version>0.5.4-SNAPSHOT</version>
 	</parent>
