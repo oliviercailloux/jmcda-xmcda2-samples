@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>jmcda</artifactId>
 		<groupId>org.decision_deck.jmcda</groupId>
-		<version>0.5.3</version>
+		<version>0.5.4-SNAPSHOT</version>
 	</parent>
 	<artifactId>jmcda-xmcda2-samples</artifactId>
 	<name>XMCDA v2 sample files</name>
