@@ -6,7 +6,7 @@
 		<artifactId>pom</artifactId>
 		<version>0.5.4-SNAPSHOT</version>
 	</parent>
-	<artifactId>jmcda-xmcda2-samples</artifactId>
+	<artifactId>xmcda2-samples</artifactId>
 	<name>XMCDA v2 sample files</name>
 	<description>Sample files conforming to the XMCDA v2 schema</description>
 </project>
