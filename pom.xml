@@ -8,7 +8,7 @@
 		<version>0.6.0</version>
 	</parent>
 	<artifactId>xmcda2-samples</artifactId>
-	<version>0.5.4</version>
+	<version>0.5.5-SNAPSHOT</version>
 	<name>XMCDA v2 sample files</name>
 	<description>Sample files conforming to the XMCDA v2 schema</description>
 </project>
